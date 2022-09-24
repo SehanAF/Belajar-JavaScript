@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+   
+        // Kode : tanpa With Statement
+        const person = {
+            firstName: "Sehan",
+            middleName: "Alexa", 
+            lastName: "Alfarisi"
+        };
+
+        const orang = {
+            firstName: "Sehun",
+            middleName: "Alexu", 
+            lastName: "Alfarisa"
+        };
+
+        console.info(person.firstName);
+        console.info(person.middleName);
+        console.info(person.lastName);
+
+        const firstName = "Budi";
+        const lastName = "Nugraha";
+        with (orang){
+            console.info(firstName);
+            console.info(middleName);
+            console.info(lastName);
+        }
+    
+        with (person){
+            console.info(firstName);
+            console.info(middleName);
+            console.info(lastName);
+        }
+
+    </script>
+        
+</body>
+</html>

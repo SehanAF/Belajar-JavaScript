@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // Kode : Global Scope
+        let counter = 0;
+        
+        function hitMe(){
+            // local scope function hitMe
+            counter++;
+        }
+
+        // global scope //
+        hitMe();
+        hitMe();
+
+        console.info(counter);
+
+        function other(){
+            // local scope other
+        }
+
+        // global scope //
+        hitMe();
+        hitMe();
+        console.info(counter);
+
+        // Kode : Nested Function Scope
+
+        function first(){
+            // local scope first
+            let firstVariable = "First";
+        
+            function firstNested(){
+                console.infp(firstVariable);
+                const firstNestedVariable = "First Nested";
+            }
+            firstNested();
+            console.info(firstNestedVariable)
+        
+        }
+
+    </script>
+</body>
+</html>

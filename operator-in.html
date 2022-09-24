@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const person = {
+            firstName: "Sehan",
+            lastName: "Alexa"
+        };
+
+        if ("firstName" in person){
+            alert(`Hello ${person.firstName}`);
+        } else {
+            alert("Hello");
+        }
+
+        // Kode : In Operator Undefined/Null Property
+        const student = {
+            firstName : "Sehan",
+            middleName : undefined,
+            lastName : "Alfarisi"
+        };
+
+        if ("middleName" in student) {
+            alert(`Hello ${student.middleName}`);
+        } else {
+            alert("Hello Student");
+        };
+
+        const names = [null, "Sehan", null];
+        const result = 0 in names;
+        document.writeln(`<p>${result}</p>`);
+
+    </script>
+</body>
+</html>

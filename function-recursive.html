@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // Kode : Factorial Loop
+        function factorial(value) {
+            let result = 1;
+            for(let i = 1; i <= value; i++) {
+                result *= i;
+            }
+            return result;
+        }
+
+        console.info(factorial(10));
+        console.info(10 * 10);
+
+        // Kode : Factorial Recursive
+        function factorialRecursive(value){
+            if(value === 1){
+                return 1;
+            } else {
+                return value * factorialRecursive(value -1);
+            }
+        }
+
+        console.info(factorialRecursive(10));
+
+        // Cara Kerja Factorial Recursive
+        factorialRecursive(5);
+        // 5 * factorialRecursive(4) 
+        // 5 * 4 * factorialRecursive(3) 
+        // 5 * 4 * 3 * factorialRecursive(2) 
+        // 5 * 4 * 3 * 2 * factorialRecursive(1) 
+        // 5 * 4 * 3 * 1 
+    
+
+        function factorialRecursave(value){
+            if(value === 10){
+                return 10;
+            } else {
+                return value + factorialRecursave(value -10)
+            }
+        }
+        console.info(factorialRecursave(100));
+
+        for (let counter = 1;counter <= 10; counter++) {
+            document.writeln(`<p>Perulangan ke ${counter}</p>`)
+        }
+    </script>
+</body>
+</html>
