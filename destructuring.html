@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+         {
+            // Kode: Mengambil Data di Array secara manual.
+            const names = ["Sehan", "Alfarisi", "Alexa"];
+            const firstName = names[0];
+            const middleName = names[1];
+            const lastName = names[2];
+
+            console.info(firstName);
+            console.info(middleName);
+            console.info(lastName);
+
+         }
+         
+         {
+            const name = ["Sehan", "Alfarisi", "Alexa", "Gavi", "Dominic"];
+            const [farstName, maddleName, lustName, ...other] = name;
+
+            console.info(farstName);
+            console.info(maddleName);
+            console.info(lustName);
+            console.info(other);
+         }
+
+        // Kode : Mengambil Data di Object
+
+        {
+            const person = {
+                firstName: "Sehan",
+                lastName: "Andra",
+                address: {
+                    street: "Jl Soka",
+                    city: "Sukabumi City",
+                    country: "Indonesia"
+                },
+                hobby: "Game",
+                channel: "Programmer"
+            };
+
+            // Kode : Destructuring Object
+            let {firstName,lastName, address, ...other} = person;
+            console.info(firstName);
+            console.info(lastName);
+            console.info(address);
+            console.info(other);
+
+            {
+                // Kode : Destructuring Nested Object
+                let {firstName,lastName, address:{city, street, country}, ...other} = person;
+                console.info(firstName);
+                console.info(lastName);
+                console.info(city);
+                console.info(street);
+                console.info(country);
+                console.info(other);
+            }
+
+            {
+                // Kode : Destructuring di Function Parameter(1)
+                function displayPerson({firstName,middleName,lastName}){
+                    console.info(firstName);
+                    console.info(middleName);
+                    console.info(lastName);
+                }
+                
+                
+                const person = {
+                    firstName: "Sehan",
+                    middleName: "Alexa",
+                    lastName: "Alfarisi",
+                };
+
+                displayPerson(person);
+            }
+
+            {
+                // Kode : Destructuring di Function Parameter(2) | Array
+                function sum([first,second]){
+                    return first + second;
+                }
+
+                console.info(sum([1,1]));
+                console.info(sum([10,10]));
+            }
+            
+        }
+
+        {
+            // Kode : Default Value Destructuring Array
+            const names = ["Sehan", "Alfarisi", "Gavi"];
+            const [firstName, middleName = "Kurniawan", lastName = "Alexa" ] = names; // contoh Array default
+
+            console.info(firstName);
+            console.info(middleName);
+            console.info(lastName);
+        }
+
+        {
+            // Kode : Default Value Destructuring Object
+            const person = {
+                firstName: "Sehan",
+                lastName: "Alexa"
+            };
+
+            const {firstName,middleName = "Gabi", lastName} = person;
+            console.info(firstName);
+            console.info(middleName);
+            console.info(lastName);
+        }
+
+        {
+            // Kode : Menggunakan Nama Variable Lain
+            let {firstName: namaDepan,
+                middleName: namaTengah = "Sehan",
+                lastName: namaBelakang} = person;
+            console.info(firstName);
+            console.info(middleName);
+            console.info(lastName);
+        }
+    </script>
+</body>
+</html>
